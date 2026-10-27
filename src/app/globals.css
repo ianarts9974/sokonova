@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-soft-white: #f8fafc;
+  --text-charcoal: #18181b;
+  --brand-orange: #f97316;
+}
+
+body {
+  background-color: var(--bg-soft-white);
+  color: var(--text-charcoal);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-invoice,
+  #printable-invoice * {
+    visibility: visible;
+  }
+  #printable-invoice {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
